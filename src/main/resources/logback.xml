@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- <property name="LOG_LOCATION" value="c:/temp"/>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+            <File>{LOG_LOCATION}/mylog.log</File>
+            <encoder>
+                 <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n</pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_LOCATION}/archived/mylog-%d{yyyy-MM-dd}.%i.log
+                </fileNamePattern>
+                <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                    <maxFileSize>10MB</maxFileSize>
+                </timeBasedFileNamingAndTriggeringPolicy>
+            </rollingPolicy>
+        </appender> -->
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <!--         <appender-ref ref="FILE"/> -->
+    </root>
+</configuration>
